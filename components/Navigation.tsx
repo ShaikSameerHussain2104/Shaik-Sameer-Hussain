@@ -173,13 +173,13 @@
 
 
 
-//SECOND WAY
-// "use client"
 
-// import { useState, useEffect, useRef } from "react"
-// import { motion, AnimatePresence } from "framer-motion"
-// import { Menu, X, Command } from "lucide-react"
-// import Link from "next/link"
+//working WAY but not for the mobile view
+
+// import { useState, useEffect } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { Menu, X, Command } from "lucide-react";
+// import Link from "next/link";
 
 // const navItems = [
 //   { name: "About", href: "#about" },
@@ -188,51 +188,35 @@
 //   { name: "Achievements", href: "#achievements" },
 //   { name: "Experience", href: "#experience" },
 //   { name: "Contact", href: "#contact" },
-// ]
+// ];
 
 // export default function Navigation() {
-//   const [isOpen, setIsOpen] = useState(false)
-//   const [scrolled, setScrolled] = useState(false)
-//   const [showCommandBar, setShowCommandBar] = useState(false)
-//   const [commandInput, setCommandInput] = useState("")
-//   const commandInputRef = useRef<HTMLInputElement>(null)
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [scrolled, setScrolled] = useState(false);
+//   const [showCommandBar, setShowCommandBar] = useState(false);
+//   const [commandInput, setCommandInput] = useState("");
+//   const [hoveredItem, setHoveredItem] = useState<string | null>(null);  // Corrected type here
 
 //   useEffect(() => {
 //     const handleScroll = () => {
-//       setScrolled(window.scrollY > 20)
-//     }
-//     window.addEventListener("scroll", handleScroll)
-//     return () => window.removeEventListener("scroll", handleScroll)
-//   }, [])
+//       setScrolled(window.scrollY > 20);
+//     };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
 
 //   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-//     e.preventDefault()
-//     const target = document.querySelector(href)
+//     e.preventDefault();
+//     const target = document.querySelector(href);
 //     if (target) {
-//       target.scrollIntoView({ behavior: "smooth" })
+//       target.scrollIntoView({ behavior: "smooth" });
 //     }
-//     setIsOpen(false)
-//   }
+//     setIsOpen(false);
+//   };
 
 //   const toggleCommandBar = () => {
-//     setShowCommandBar(!showCommandBar)
-//     if (!showCommandBar) {
-//       setTimeout(() => commandInputRef.current?.focus(), 100)
-//     }
-//   }
-
-//   const handleCommandSubmit = (e: React.FormEvent) => {
-//     e.preventDefault()
-//     const targetSection = navItems.find((item) => item.name.toLowerCase() === commandInput.toLowerCase())
-//     if (targetSection) {
-//       const target = document.querySelector(targetSection.href)
-//       if (target) {
-//         target.scrollIntoView({ behavior: "smooth" })
-//       }
-//     }
-//     setCommandInput("")
-//     setShowCommandBar(false)
-//   }
+//     setShowCommandBar(!showCommandBar);
+//   };
 
 //   return (
 //     <>
@@ -259,6 +243,8 @@
 //                     initial={{ opacity: 0, y: -20 }}
 //                     animate={{ opacity: 1, y: 0 }}
 //                     transition={{ duration: 0.5, delay: index * 0.1 }}
+//                     onHoverStart={() => setHoveredItem(item.name)}
+//                     onHoverEnd={() => setHoveredItem(null)}
 //                   >
 //                     <Link
 //                       href={item.href}
@@ -269,8 +255,12 @@
 //                         {item.name.split("").map((letter, index) => (
 //                           <motion.span
 //                             key={index}
-//                             whileHover={{ rotate: 360 }}
-//                             transition={{ duration: 0.6, delay: index * 0.05 }}
+//                             initial={{ rotate: 0 }}
+//                             animate={
+//                               hoveredItem === item.name
+//                                 ? { rotate: 360, transition: { duration: 0.6, delay: index * 0.1 } }
+//                                 : {}
+//                             }
 //                             className="inline-block"
 //                           >
 //                             {letter}
@@ -339,10 +329,9 @@
 //             exit={{ opacity: 0, y: -50 }}
 //             className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 w-96 bg-gray-800 rounded-lg shadow-lg"
 //           >
-//             <form onSubmit={handleCommandSubmit} className="flex items-center p-2">
+//             <form onSubmit={(e) => e.preventDefault()} className="flex items-center p-2">
 //               <Command className="h-5 w-5 text-gray-400 mr-2" />
 //               <input
-//                 ref={commandInputRef}
 //                 type="text"
 //                 value={commandInput}
 //                 onChange={(e) => setCommandInput(e.target.value)}
@@ -354,11 +343,14 @@
 //         )}
 //       </AnimatePresence>
 //     </>
-//   )
+//   );
 // }
 
 
-//FOURTH WAY
+
+//TRIAL 1
+
+"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -379,7 +371,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [showCommandBar, setShowCommandBar] = useState(false);
   const [commandInput, setCommandInput] = useState("");
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);  // Corrected type here
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -427,8 +419,8 @@ export default function Navigation() {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    onHoverStart={() => setHoveredItem(item.name)}
-                    onHoverEnd={() => setHoveredItem(null)}
+                    onMouseEnter={() => setHoveredItem(item.name)}
+                    onMouseLeave={() => setHoveredItem(null)}
                   >
                     <Link
                       href={item.href}
