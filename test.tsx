@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <Head>
         <link
+        
           rel="icon"
           href="https://live.staticflickr.com/65535/54301733371_67afcb5230_b.jpg"
         />
