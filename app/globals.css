@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: "Poppins", sans-serif;
+}
+
+.text-navy-blue {
+  color: #ffffff;
+  text-shadow: 0 0 5px #000080, 0 0 10px #000080, 0 0 15px #000080, 0 0 20px #000080;
+}
+
+.bg-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth micro-interactions */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+a:hover,
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg-glassmorphism {
+    padding: 1rem;
+  }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) {
+  a:hover,
+  button:hover {
+    transform: none;
+  }
+}
+
+/* Fluid typography */
+html {
+  font-size: calc(14px + 0.390625vw);
+}
+
