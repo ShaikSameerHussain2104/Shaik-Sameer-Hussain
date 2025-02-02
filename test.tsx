@@ -24,6 +24,7 @@ export default function RootLayout({
           href="https://live.staticflickr.com/65535/54301733371_67afcb5230_b.jpg"
         />
       </Head>
+      
       <body className="bg-black text-white min-h-screen flex flex-col">
         <DynamicBackground />
         <Navigation />
