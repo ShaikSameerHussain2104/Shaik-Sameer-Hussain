@@ -27,6 +27,14 @@ export default function RootLayout({
       <body className="bg-black text-white min-h-screen flex flex-col">
         <DynamicBackground />
         <Navigation />
+        {/* Optimizing the image */}
+        <Image
+          src="https://live.staticflickr.com/65535/54301733371_67afcb5230_b.jpg"
+          alt="Favicon Image"
+          width={64}  // Adjust the size as needed
+          height={64} // Adjust the size as needed
+          priority // This tells Next.js to prioritize this image for faster loading
+        />
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>

@@ -34,7 +34,7 @@ const achievements: Achievement[] = [
     title: "Smart India Hackathon Winner",
     description: "Won at the college level in the Smart India Hackathon.",
     story:
-      "Led a team of 6 to develop an innovative solution for rural healthcare, beating 20 other teams in an intense 36-hour hackathon.",
+      "Led a team of 6 to develop an innovative solution for teaching constitution in a simpler manner, beating 20 other teams at college level.",
     icon: <FaMedal className="text-3xl text-green-500" />,
     progress: 100,
   },
@@ -42,7 +42,7 @@ const achievements: Achievement[] = [
     title: "Top 10 Finish in Hackers Meetup CTF",
     description: "Secured a top 10 position in the Capture The Flag competition.",
     story:
-      "Solved a series of challenging cybersecurity puzzles, demonstrating skills in cryptography, web exploitation, and reverse engineering.",
+      "Solved a series of challenging cybersecurity puzzles, web exploitation etc.",
     icon: <FaFlagCheckered className="text-3xl text-red-500" />,
     progress: 75,
   },
@@ -50,15 +50,15 @@ const achievements: Achievement[] = [
     title: "Multiple Hackathon Prizes",
     description: "Won prizes in HackTheRevolution and HackTheVerse.",
     story:
-      "Developed innovative projects under tight deadlines, including a blockchain-based supply chain solution and an AI-powered mental health chatbot.",
+      "Developed innovative projects under tight deadlines, including a Virtual AI assistant which automates task and perform actions with just simple voice commands.",
     icon: <FaAward className="text-3xl text-purple-500" />,
     progress: 85,
   },
   {
     title: "College-Level Project Expo Winner",
-    description: "First place in the annual college project exhibition.",
+    description: "First place in the college project exhibition.",
     story:
-      "Presented a machine learning model for early detection of plant diseases, impressing judges with its practical applications in agriculture.",
+      "Developed a Virtual AI assistant which automates task and perform actions with just simple voice commands, impressing the judges and winning the first place.",
     icon: <FaTrophy className="text-3xl text-yellow-500" />,
     progress: 100,
   },
