@@ -19,6 +19,7 @@ export default function Hero() {
             alt="Shaik Sameer Hussain"
             width={300}
             height={300}
+            priority
             className="rounded-full border-4 border-blue-500"
           />
         </motion.div>
