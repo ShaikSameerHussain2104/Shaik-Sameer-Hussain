@@ -48,6 +48,8 @@ export async function POST(req: Request) {
         await transporter.sendMail(mailOptions);
         console.log("Email sent successfully!");
 
+
+        
         return NextResponse.json({ message: "Email sent successfully!" }, { status: 200 });
 
     } catch (error) {
