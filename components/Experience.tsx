@@ -3,7 +3,15 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 
-const experiences = [
+type Experience = {
+  company: string
+  role: string
+  period: string
+  description: string
+  caseStudy: string
+}
+
+const experiences: Experience[] = [
   {
     company: "Outlier.ai",
     role: "Code Reviewer & Prompt Engineer",
@@ -19,12 +27,12 @@ const experiences = [
     period: "August – September 2024",
     description: "Assisted in developing and maintaining web applications using modern JavaScript frameworks.",
     caseStudy:
-      "Implemented a responsive dashboard using React and D3.js, which reduced data visualization load times by 40% and improved user engagement metrics by 25%.",
+      "Worked as part of a team to build a responsive web application which includes CRUD operations",
   },
 ]
 
 export default function Experience() {
-  const [activeExperience, setActiveExperience] = useState(null)
+  const [activeExperience, setActiveExperience] = useState<Experience | null>(null)
 
   return (
     <section id="experience" className="py-20 px-4">
@@ -77,4 +85,3 @@ export default function Experience() {
     </section>
   )
 }
-
