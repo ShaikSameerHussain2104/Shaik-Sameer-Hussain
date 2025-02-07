@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     try {
         // Parse request body safely
         const body = await req.json();
-        console.log("Received Data:", body);
+       
 
         const { name, email, subject, message } = body;
 
