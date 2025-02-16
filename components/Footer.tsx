@@ -73,6 +73,7 @@ export default function Footer() {
               <Link
                 href="https://www.instagram.com/h_shaiksameer"
                 target="_blank"
+      
                 rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
