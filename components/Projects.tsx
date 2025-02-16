@@ -13,23 +13,23 @@ const projects = [
       "An AI-powered platform providing personalized services across health, finance, legal, and student domains.",
     image: "/favicon.jpeg", // Ensure this file exists in the public folder
     icon: <FaRobot className="text-4xl mb-4 text-blue-500" />,
-    github: "https://github.com/Sameerq7/AI-Driven-Comprehensive-Personal-Assistance-and-Development",
-    demo: "https://github.com/Sameerq7/AI-Driven-Comprehensive-Personal-Assistance-and-Development",
+    github: "https://github.com/h-shaiksameer/AI-Driven-Comprehensive-Personal-Assistance-and-Development",
+    demo: "https://github.com/h-shaiksameer/AI-Driven-Comprehensive-Personal-Assistance-and-Development",
   },
   {
     title: "Code Editor",
     description: "A compiler that supports multiple languages including C, C++, Java, and Python.",
     image: "/CodersDive_logo.jpg", // Ensure this file exists in the public folder
     icon: <FaCode className="text-4xl mb-4 text-green-500" />,
-    github: "https://github.com/Sameerq7/Code-Editor",
-    demo: "https://github.com/Sameerq7/Code-Editor",
+    github: "https://github.com/h-shaiksameer/Code-Editor",
+    demo: "https://github.com/h-shaiksameer/Code-Editor",
   },
   {
     title: "CodeSmith with multilingual code generator",
     description: "A multilingual code generator for automated coding solutions.",
     image: "https://codesmith-with-multilingual-support.onrender.com/download.png", // External URL
     icon: <FaCode className="text-4xl mb-4 text-blue-500" />,
-    github: "https://github.com/Sameerq7/DevOpsCodeSmith-with-MultiLingual-Support",
+    github: "https://github.com/h-shaiksameer/DevOpsCodeSmith-with-MultiLingual-Support",
     demo: "https://codesmith-with-multilingual-support.onrender.com",
   },
   {
@@ -37,15 +37,15 @@ const projects = [
     description: "A powerful Python-based AI assistant with voice recognition, task automation, and NLP capabilities.",
     image: "/image3.png", // Ensure this file exists in the public folder
     icon: <FaRobot className="text-4xl mb-4 text-green-500" />,
-    github: "https://github.com/Sameerq7/JARVIS-2.0",
-    demo: "https://github.com/Sameerq7/JARVIS-2.0",
+    github: "https://github.com/h-shaiksameer/JARVIS-2.0",
+    demo: "https://github.com/h-shaiksameer/JARVIS-2.0",
   },
   {
     title: "Project Document Creator",
     description: "A platform to effortlessly generate professional project documentation.",
     image: "/document.png", // Ensure this file exists in the public folder
     icon: <FaFileAlt className="text-4xl mb-4 text-yellow-500" />,
-    github: "https://github.com/Sameerq7/Project-Document-Creator",
+    github: "https://github.com/h-shaiksameer/Project-Document-Creator",
     demo: "https://project-document-creator.onrender.com",
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     description: "Dockerized document management system for file conversions and modifications.",
     image: "/favicon.png", // Ensure this file exists in the public folder
     icon: <FaFilePdf className="text-4xl mb-4 text-red-500" />,
-    github: "https://github.com/Sameerq7/PPT_to_PDF_Converter",
+    github: "https://github.com/h-shaiksameer/PPT_to_PDF_Converter",
     demo: "https://imanagepdf.onrender.com",
   },
 ]
