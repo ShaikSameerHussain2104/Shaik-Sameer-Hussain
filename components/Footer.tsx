@@ -85,6 +85,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} Shaik Sameer Hussain. All rights reserved.</p>
         </div>
+        
       </div>
     </footer>
   )
