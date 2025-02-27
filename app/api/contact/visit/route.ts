@@ -81,9 +81,9 @@ export async function GET(req: NextRequest) {
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: process.env.RECEIVER_EMAIL,
-            subject: "🌍 New Visitor on Your Website!",
+            subject: "PortFolio Visit, Boss..!",
             html: `
-                <h2>🚀 New Visitor Alert!</h2>
+                <h2>Visitor Alert!</h2>
                 <p>Someone just visited your portfolio!</p>
                 <h3>🌍 Visitor Details:</h3>
                 <ul>
