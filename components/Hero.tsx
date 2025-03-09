@@ -15,7 +15,8 @@ export default function Hero() {
           className="md:w-1/2 flex justify-center md:justify-end"
         >
           <Image
-            src="https://live.staticflickr.com/65535/54302168675_efd163f70c_h.jpg"
+            
+            src="/favicon2.ico"
             alt="Shaik Sameer Hussain"
             width={300}
             height={300}

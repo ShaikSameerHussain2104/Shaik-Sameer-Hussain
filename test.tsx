@@ -10,7 +10,7 @@ export const metadata = {
   title: "Shaik Sameer Hussain",
   description: "AI, DevOps, Web Development, and Competitive Programming Expert",
 };
-
+//src="https://live.staticflickr.com/65535/54302168675_efd163f70c_h.jpg"
 export default function RootLayout({
   children,
 }: {
