@@ -262,6 +262,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <Head>
       {/* Meta Data */}
+      <meta name="google-adsense-account" content="ca-pub-2939047352121012" />
       <meta name="description" content="AI, DevOps, Web Development, and Competitive Programming Expert" />
       <meta name="title" content="Shaik Sameer Hussain" />
 
