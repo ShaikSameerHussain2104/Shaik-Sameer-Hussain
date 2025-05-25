@@ -261,10 +261,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <Head>
-        {/* Meta Data */}
-        <meta name="description" content="AI, DevOps, Web Development, and Competitive Programming Expert" />
-        <meta name="title" content="Shaik Sameer Hussain" />
-      </Head>
+      {/* Meta Data */}
+      <meta name="description" content="AI, DevOps, Web Development, and Competitive Programming Expert" />
+      <meta name="title" content="Shaik Sameer Hussain" />
+
+      {/* ✅ Google AdSense Script */}
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2939047352121012"
+        crossOrigin="anonymous"
+      ></script>
+    </Head>
+
       <body 
         className="bg-black text-white min-h-screen flex flex-col"
       >
