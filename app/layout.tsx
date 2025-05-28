@@ -54,21 +54,12 @@ export default function RootLayout({
           {children}
 
           {/* ✅ Insert native ad in the middle (customize as needed) */}
-          <div className="my-6 flex justify-center">
-            <div id="container-0d12ec25f5655d3e6c41f8fb7da60e60" />
-          </div>
+          
         </main>
 
         <Footer />
 
-        {/* ✅ Correct ad script loaded at the end of <body> */}
-        <Script
-          id="adsterra-native-ads"
-          strategy="afterInteractive"
-          async
-          data-cfasync="false"
-          src="//pl26765762.profitableratecpm.com/0d12ec25f5655d3e6c41f8fb7da60e60/invoke.js"
-        />
+        
       </body>
     </html>
   );
